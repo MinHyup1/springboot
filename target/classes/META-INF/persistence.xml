@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="a_jpa">
+	
+	<properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="javax.persistence.jdbc.user" value="boot"/>
+		<property name="javax.persistence.jdbc.password" value="1234"/>
+		<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+		
+		<!-- JPA DDL 설정
+			create :  테이블이 없으면 생성 변경된 내용이 반영
+			create-drop : 기존 테이블을 무조건 삭제, Entity관계에 맞춰 테이블을 새로 생성
+			drop : 테이블 삭제
+			none : ddl off (배포시 반드시 세팅)
+	 -->
+		
+		<property name="hibernate.hbm2ddl.auto" value="none"/>
+		<property name="hibernate.show_sql" value="true"/>
+		<property name="hibernate.format_sql" value="true"/>
+	</properties>
+	
+	
+	
+	
+	
+	</persistence-unit>
+</persistence>
